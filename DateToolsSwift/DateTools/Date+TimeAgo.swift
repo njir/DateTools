@@ -77,18 +77,18 @@ public extension Date {
         //and @"This morning", @"This afternoon"
         
         if (components.year! >= 2) {
-            return self.logicalLocalizedStringFromFormat(format: "%%d %@년 전", value: components.year!)
+            return self.logicalLocalizedStringFromFormat(format: "%%d%@년 전", value: components.year!)
         }
         else if (components.year! >= 1) {
             
             if (numericDates) {
-                return DateToolsLocalizedStrings("1년  전");
+                return DateToolsLocalizedStrings("1년 전");
             }
             
             return DateToolsLocalizedStrings("작년");
         }
         else if (components.month! >= 2) {
-            return self.logicalLocalizedStringFromFormat(format: "%%d %@개월 전", value: components.month!)
+            return self.logicalLocalizedStringFromFormat(format: "%%d%@개월 전", value: components.month!)
         }
         else if (components.month! >= 1) {
             
@@ -99,18 +99,18 @@ public extension Date {
             return DateToolsLocalizedStrings("지난 달");
         }
         else if (components.weekOfYear! >= 2) {
-            return self.logicalLocalizedStringFromFormat(format: "%%d %@주 전", value: components.weekOfYear!)
+            return self.logicalLocalizedStringFromFormat(format: "%%d%@주 전", value: components.weekOfYear!)
         }
         else if (components.weekOfYear! >= 1) {
             
             if (numericDates) {
-                return DateToolsLocalizedStrings("1주 전");
+                return DateToolsLocalizedStrings("지난 주");
             }
             
             return DateToolsLocalizedStrings("지난 주");
         }
         else if (components.day! >= 2) {
-            return self.logicalLocalizedStringFromFormat(format: "%%d %@일 전", value: components.day!)
+            return self.logicalLocalizedStringFromFormat(format: "%%d%@일 전", value: components.day!)
         }
         else if (isYesterday) {
             if (numericDates) {
@@ -120,7 +120,7 @@ public extension Date {
             return DateToolsLocalizedStrings("어제");
         }
         else if (components.hour! >= 2) {
-            return self.logicalLocalizedStringFromFormat(format: "%%d %@시간 전", value: components.hour!)
+            return self.logicalLocalizedStringFromFormat(format: "%%d%@시간 전", value: components.hour!)
         }
         else if (components.hour! >= 1) {
             
@@ -131,7 +131,7 @@ public extension Date {
             return DateToolsLocalizedStrings("한 시간 전");
         }
         else if (components.minute! >= 2) {
-            return self.logicalLocalizedStringFromFormat(format: "%%d %@분 전", value: components.minute!)
+            return self.logicalLocalizedStringFromFormat(format: "%%d%@분 전", value: components.minute!)
         }
         else if (components.minute! >= 1) {
             
@@ -142,7 +142,7 @@ public extension Date {
             return DateToolsLocalizedStrings("1분 전");
         }
         else if (components.second! >= 3) {
-            return self.logicalLocalizedStringFromFormat(format: "%%d %@초 전", value: components.second!)
+            return self.logicalLocalizedStringFromFormat(format: "%%d%@초 전", value: components.second!)
         }
         else {
             
